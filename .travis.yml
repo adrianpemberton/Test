@@ -5,4 +5,6 @@ env:
   - 'FTP_USER=testtravis_travis.alfutures.co.uk'
   - 'FTP_PASSWORD=travisPassword'
   after_success:
-      "curl -T index.html -u $FTP_USER:$FTP_PASSWORD"
+  "curl -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://wecodetheweb.com/public_html/"
+
+      "curl -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://travis.alfutures.co.uk"
