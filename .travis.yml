@@ -3,6 +3,6 @@ language: generic
 env:
   global:
   - 'FTP_USER=testtravis_travis.alfutures.co.uk'
-  - 'SFTP_PASSWORD=travisPassword'
+  - 'FTP_PASSWORD=travisPassword'
   after_success:
       "curl -T index.html -u $FTP_USER:$FTP_PASSWORD"
