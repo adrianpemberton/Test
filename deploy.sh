@@ -1,5 +1,6 @@
 #!/bin/bash
-filesChanged=$(git diff)
+filesChanged=$(git ls-tree --full-tree -r HEAD --name-only)
+
 if [ ${#filesChanged[@]} -eq 0 ]; then
     echo "No files to update"
 else
