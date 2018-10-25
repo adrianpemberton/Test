@@ -1,11 +1,15 @@
 language: generic
 
+env:
+  global:
+    - "FTP_USER=user"
+    - "FTP_PASSWORD=password"
+after_success:
+
 
 env:
   global:
   - 'FTP_USER=testtravis_travis.alfutures.co.uk'
   - 'SFTP_PASSWORD=travisPassword'
   after_success:
-- curl --ftp-create-dirs
-       -T filename
-       ftp://${SFTP_USER}:${SFTP_PASSWORD}@travis.alfutures.co.uk/
+      "curl -T index.html -u $FTP_USER:$FTP_PASSWORD"
