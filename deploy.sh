@@ -9,7 +9,7 @@ else
 		if [ "$f" != ".travis.yml" ] && [ "$f" != "deploy.sh" ]
 		then
 	 		echo "Uploading $f"
-      curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://travis.alfutures.co.uk
+	 		curl --ftp-create-dirs -T $f -u $FTP_USER:$FTP_PASSWORD ftp://travis.alfutures.co.uk/$f
 		fi
 	done
 fi
