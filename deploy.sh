@@ -1,5 +1,5 @@
 #!/bin/bash
-filesChanged=$(git diff-tree --no-commit-id --name-only -r $lastCommit)
+filesChanged=$(git diff)
 if [ ${#filesChanged[@]} -eq 0 ]; then
     echo "No files to update"
 else
