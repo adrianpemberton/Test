@@ -2,13 +2,6 @@ language: generic
 
 env:
   global:
-    - "FTP_USER=user"
-    - "FTP_PASSWORD=password"
-after_success:
-
-
-env:
-  global:
   - 'FTP_USER=testtravis_travis.alfutures.co.uk'
   - 'SFTP_PASSWORD=travisPassword'
   after_success:
