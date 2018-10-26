@@ -2,7 +2,6 @@ language: generic
 
 env:
   global:
-  - 'FTP_USER=upload_travis.alfutures.co.uk'
-  - 'FTP_PASSWORD=password'
+  
 after_success:
   - ./deploy.sh 
